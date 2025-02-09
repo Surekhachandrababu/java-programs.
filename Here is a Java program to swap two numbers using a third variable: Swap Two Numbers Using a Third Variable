@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class SwapWithTemp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        int a = scanner.nextInt();
+        System.out.print("Enter second number: ");
+        int b = scanner.nextInt();
+
+        // Swapping using a third variable (temp)
+        int temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After swapping: First number = " + a + ", Second number = " + b);
+        scanner.close();
+    }
+}
