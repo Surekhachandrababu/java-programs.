@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class MirroredTrianglePattern {
+    public static void main(String[] args) {
+        // Create Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Take the size of the pattern as input
+        System.out.print("Enter the size of the pattern: ");
+        int size = scanner.nextInt();
+
+        // Upper pyramid
+        for (int i = 1; i <= size; i++) {
+            // Print leading spaces
+            for (int j = size; j > i; j--) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int k = 1; k <= i; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        // Lower inverted pyramid
+        for (int i = size - 1; i >= 1; i--) {
+            // Print leading spaces
+            for (int j = size; j > i; j--) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int k = 1; k <= i; k++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+        // Close scanner
+        scanner.close();
+    }
+}
