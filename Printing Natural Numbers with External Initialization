@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class NaturalNumbers {
+    public static void main(String[] args) {
+        // Create Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Take the value of N as input
+        System.out.print("Enter a number (N): ");
+        int n = scanner.nextInt();
+
+        // Initialization outside the for loop
+        int i = 1;
+        
+        // Printing natural numbers using for loop
+        System.out.print("The first " + n + " natural numbers are: ");
+        for (; i <= n; i++) { // No initialization inside for loop
+            System.out.print(i);
+            if (i < n) {
+                System.out.print(", "); // To format output with commas
+            }
+        }
+
+        // Close scanner
+        scanner.close();
+    }
+}
